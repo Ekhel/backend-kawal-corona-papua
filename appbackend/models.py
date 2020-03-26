@@ -31,6 +31,9 @@ class Penderita(models.Model):
     )
     status = models.CharField(max_length=15, choices=STATUS_CHOICES,default='sembuh')
 
+    class Meta:
+        ordering = ('id_penderita',)
+
     def __str__(self):
-        return self.nama
+        return self.nama_lengkap
 
