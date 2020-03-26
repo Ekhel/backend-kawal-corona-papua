@@ -1,5 +1,5 @@
-# BACKEND LIVE DATA PENYEBARAN CORONAVIRUS (PAPUA)
------------------------------------------------------------------------------
+# BACKEND LIVE DATA KASUSU CORONAVIRUS (PAPUA)
+
 [![Build Status](https://travis-ci.com/Ekhel/backend-kawal-corona-papua.svg?branch=master)](https://travis-ci.com/Ekhel/backend-kawal-corona-papua)
 [![Gitter](https://badges.gitter.im/jayapura_django/community.svg)](https://gitter.im/jayapura_django/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
