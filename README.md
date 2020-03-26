@@ -18,11 +18,11 @@
   - Django REST Framework (API)
   - Gunicorn (Web Server)
 
-* Services:
-  - Travis CI
-
 * Frontend :
   - [Kawal-Corona](https://github.com/Ekhel/kawal-corona)
+
+* HOST
+  - [Heroku](https://kawal-corona.herokuapp.com/api/)
 
 ------------------------------------------------------------------------------
 
