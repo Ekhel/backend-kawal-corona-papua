@@ -25,7 +25,7 @@ SECRET_KEY = '2$ki48+!@x&i#6tdln+kztnv(f86fw))2u0%tb61fe@zwtu!e6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['kawal-corona.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -49,7 +49,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ROOT_URLCONF = 'backend.urls'
 
@@ -124,7 +127,12 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 10
 }
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
 
 ADMIN_SITE_HEADER = "KAWAL CORONA"
 ADMIN_SITE_INDEX = "Backend Administrator"
