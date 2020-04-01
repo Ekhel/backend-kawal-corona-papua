@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Kabupaten, Penderita
+from .models import Kabupaten, Penderita, Rumah_sakit
 
 class PageKabupaten(admin.ModelAdmin):
     list_display = ('id_kabupaten','nama')
@@ -14,7 +14,14 @@ class PagePenderita(admin.ModelAdmin):
     search_fields = ('id_penderita','nama_lengkap','lokasi','status','gender')
     list_per_page = 10
 
+class PageRumahSakit(admin.ModelAdmin):
+    list_display = ('id_rs','rumah_sakit','lokasi','lat','lon')
+    list_display_links = ('id_rs','rumah_sakit','lokasi','lat','lon')
+    search_fields = ('id_rs','rumah_sakit','lokasi','lat','lon')
+    list_per_page = 10
+
 
 admin.site.register(Kabupaten, PageKabupaten)
 admin.site.register(Penderita, PagePenderita)
+admin.site.register(Rumah_sakit, PageRumahSakit)
 

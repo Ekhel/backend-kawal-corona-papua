@@ -27,8 +27,6 @@ class KabupateView(ListView):
         return render(contex)
 
 class PenderitaView(ListView):
-    page_title = 'Positif | Backend'
-
     template_name = 'penderita/r-penderita.html'
     model = Penderita
     

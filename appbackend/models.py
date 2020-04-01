@@ -37,3 +37,16 @@ class Penderita(models.Model):
     def __str__(self):
         return self.nama_lengkap
 
+
+class Rumah_sakit(models.Model):
+    id_rs = models.AutoField(primary_key=True)
+    rumah_sakit = models.CharField(max_length=100)
+    lokasi = models.ForeignKey(Kabupaten, on_delete=models.CASCADE)
+    lat = models.CharField(max_length=128)
+    lon = models.CharField(max_length=120)
+
+    class Meta:
+        ordering = ('id_rs',)
+    
+    def __str__(self):
+        return self.rumah_sakit
