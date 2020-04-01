@@ -10,16 +10,27 @@ def login(request):
 
 @login_required
 def dashboard(request):
-    return render(request, 'page/dashboard.html')
-
+    contex = {
+        "page_title": "Dashboard | Backend"
+    }
+    
+    return render(request, 'page/dashboard.html', contex)
 
 class KabupateView(ListView):
     template_name = 'kabupaten/r-kabupaten.html'
     model = Kabupaten
 
+    def page_title(self):
+        contex = {
+            "page_title": "Kabupaten"
+        }
+        return render(contex)
 
 class PenderitaView(ListView):
+    page_title = 'Positif | Backend'
+
     template_name = 'penderita/r-penderita.html'
     model = Penderita
+    
 
 

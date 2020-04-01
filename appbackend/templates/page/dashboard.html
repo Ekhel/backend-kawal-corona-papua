@@ -1,7 +1,8 @@
 {% extends 'site_admin.html' %}
+{% block title %} {{ page_title }} {% endblock title %}
 
 {% block content %}
-
+<h1>{{ page_title }}</h1>
 <div class="row">
     <div class="col-xl-3 col-lg-6">
         <div class="card card-stats mb-4 mb-xl-0">
@@ -26,9 +27,9 @@
 </div>
 
 <div class="col-xl-3 col-lg-6">
-        <div class="card card-stats mb-4 mb-xl-0">
-           <div class="card-body">
-             <div class="row">
+    <div class="card card-stats mb-4 mb-xl-0">
+        <div class="card-body">
+            <div class="row">
                <div class="col">
                <h5 class="card-title text-uppercase text-muted mb-0">POSITIF</h5>
                <span class="h2 font-weight-bold mb-0">10</span>
@@ -43,7 +44,7 @@
             
             <span class="text-nowrap">Per Tgl 31/03</span>
             </p>
-        </div>
     </div>
+</div>
 
 {% endblock content %}

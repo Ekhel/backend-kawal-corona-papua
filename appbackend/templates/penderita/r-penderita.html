@@ -21,7 +21,7 @@
                     <tbody>
                     {% for items in object_list %}
                       <tr>
-                         <th scope="row">{{ items.id_penderita }}</th>
+                         <th scope="row">{{ forloop.counter }}</th>
                          <td scope="row">{{ items.lokasi }}</td>
                          <td scope="row">{{ items.gender }}</td>
                          <td scope="row">{{ items.status }}</td>
