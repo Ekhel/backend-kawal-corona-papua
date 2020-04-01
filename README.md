@@ -1,4 +1,4 @@
-# BACKEND LIVE DATA KASUS CORONAVIRUS (PAPUA)
+# BACKEND LIVE DATA KASUS COVID 19 (PAPUA)
 
 [![Build Status](https://travis-ci.com/Ekhel/backend-kawal-corona-papua.svg?branch=master)](https://travis-ci.com/Ekhel/backend-kawal-corona-papua)
 [![Gitter](https://badges.gitter.im/jayapura_django/community.svg)](https://gitter.im/jayapura_django/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
@@ -14,7 +14,7 @@
 
 * DBMS :
   - SQLite (On Local)
-  - Postgre 9.6 (On Heroku)
+  - Postgre (On Heroku)
 
 * Library :
   - Django REST Framework (API)
@@ -24,7 +24,7 @@
   - [Kawal-Corona](https://github.com/Ekhel/kawal-corona)
 
 * HOST
-  - [Heroku](https://kawal-corona.herokuapp.com/api/)
+  - [Heroku](https://kawal-corona.herokuapp.com)
 
 ------------------------------------------------------------------------------
 
