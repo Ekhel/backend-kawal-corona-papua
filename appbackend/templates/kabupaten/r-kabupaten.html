@@ -1,0 +1,37 @@
+{% extends 'site_admin.html' %}
+
+{% block content %}
+
+<div class="row">
+      <div class="col">
+        <div class="card shadow">
+           <div class="card-header border-0">
+              <h4 class="mb-0">Daftar Kabupaten</h4>
+            </div> 
+            <div class="table-responsive">
+              <table class="table align-items-center table-flush">
+                 <thead class="thead-light">
+                    <tr>
+                       <th scope="col">ID</th>
+                       <th scope="col">Kab/Kota</th>
+                       <th scope="col">Latitude</th>
+                       <th scope="col">Longitude</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for items in object_list %}
+                      <tr>
+                         <th scope="row">{{ items.id_kabupaten }}</th>
+                         <td scope="row">{{ items.nama }}</td>
+                         <td scope="row">{{ items.lat }}</td>
+                         <td scope="row">{{ items.lon }}</td>
+                       </tr>
+                        {% endfor %}
+                    </tbody>
+               </table>
+            </div>
+          </div>
+       </div>
+   </div>
+
+{% endblock content %}
