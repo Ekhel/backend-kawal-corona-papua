@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from ..models import Penderita, Kabupaten
+from ..models import Penderita, Kabupaten, Rumah_sakit
 
 class PenderitaSerializers(serializers.HyperlinkedModelSerializer):
     lokasi = serializers.StringRelatedField(read_only=True)
@@ -22,4 +22,17 @@ class KabupatenSerializers(serializers.ModelSerializer):
             'nama',
             'lon',
             'lat'
+        )
+
+class RsSerializers(serializers.HyperlinkedModelSerializer):
+    lokasi = serializers.StringRelatedField(read_only=True)
+
+    class Meta:
+        model = Rumah_sakit
+        fields = (
+            'id_rs',
+            'rumah_sakit',
+            'lokasi',
+            'lat',
+            'lon'
         )
