@@ -20,14 +20,14 @@ class Penderita(models.Model):
     nama_lengkap = models.CharField(max_length=250)
     lokasi = models.ForeignKey(Kabupaten, on_delete=models.CASCADE)
     GENDER_CHOICES = (
-        ('laki-laki','LAKI-LAKI'),
-        ('perempuan', 'PEREMPUAN'),
+        ('Laki-Laki','LAKI-LAKI'),
+        ('Perempuan', 'PEREMPUAN'),
     )
     gender = models.CharField(max_length=15, choices=GENDER_CHOICES,default='laki-laki')
     STATUS_CHOICES = (
-        ('sembuh','SEMBUH'),
-        ('meninggal', 'MENINGGAL'),
-        ('perawatan', 'PERAWATAN'),
+        ('Sembuh','SEMBUH'),
+        ('Meninggal', 'MENINGGAL'),
+        ('Positif', 'POSITIF'),
     )
     status = models.CharField(max_length=15, choices=STATUS_CHOICES,default='sembuh')
 
