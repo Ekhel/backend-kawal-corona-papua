@@ -5,6 +5,7 @@ from django.contrib.auth import views as auth_views
 from . views import (
     KabupateView,
     PenderitaView,
+    RumahSakitView,
 )
 
 from . import views
@@ -16,4 +17,7 @@ urlpatterns = [
     path('dashboard', views.dashboard, name='dashboard'),
     path('kabupaten', login_required(KabupateView.as_view()), name='kabupaten'),
     path('penderita', login_required(PenderitaView.as_view()), name='penderita'),
+    path('penderita/create', views.create_penderita, name='creatependerita'),
+    path('rumahsakit', login_required(RumahSakitView.as_view()), name='rumahsakit'),
+    path('rumahsakit/create', views.create_rs, name='creaters'),
 ]
