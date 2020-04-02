@@ -1,8 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.urls import reverse_lazy
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-from django.views.generic import ListView
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from .models import Kabupaten, Penderita, Rumah_sakit
 
 def login(request):
@@ -30,6 +31,19 @@ class PenderitaView(ListView):
     template_name = 'penderita/r-penderita.html'
     model = Penderita
 
+class PenderitaCreateView(CreateView):
+    model = Penderita
+    template_name = 'penderita/c-penderita.html'
+    fields = ('nama_lengkap','lokasi','gender','status')
+    success_url = reverse_lazy('penderita')
+
+class PenderitaUpdateView(UpdateView):
+    model = Penderita
+    template_name = 'penderita/u-penderita.html'
+    fields = ('nama_lengkap','lokasi','gender','status')
+    success_url = reverse_lazy('penderita')
+
+
 @login_required
 def create_penderita(request):
     contex = {
@@ -44,13 +58,19 @@ class RumahSakitView(ListView):
     model = Rumah_sakit
 
 
-@login_required
-def create_rs(request):
-    contex = {
-        "page_title": "Create | Rumah Sakit Rujukan"
-    }
-    
-    return render(request, 'rumahsakit/c-rumahsakit.html', contex)
+class RumahSakitCreateView(CreateView):
+    model = Rumah_sakit
+    template_name = 'rumahsakit/c-rumahsakit.html'
+    fields = ('rumah_sakit','lokasi','lat','lon')
+    success_url = reverse_lazy('rumahsakit')
+
+
+class RumahSakitUpdateView(UpdateView):
+    model = Rumah_sakit
+    template_name = 'rumahsakit/u-rumahsakit.html'
+    fields = ('rumah_sakit','lokasi','lat','lon')
+    context_object_name = 'Rumah Sakit'
+    success_url = reverse_lazy('rumahsakit')
     
 
 

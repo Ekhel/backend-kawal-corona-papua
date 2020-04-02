@@ -10,32 +10,12 @@
             </div>
         </div>
         <div class="card-body pt-0 pt-md-4">
-            <form>
-                <div class="form-group">
-                    <label for="example-text-input" class="form-control-label">Nama RS</label>
-                    <input class="form-control" type="text" value="John Snow" id="example-text-input">
-                </div>
-                <div class="form-group">
-                    <label for="example-text-input" class="form-control-label">Lokasi</label>
-                    <select class="form-control">
-                        <option>Jayapura Kota</option>
-                        <option>Jayapura</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="example-text-input" class="form-control-label">Latitude</label>
-                    <input class="form-control" type="text" value="John Snow" id="example-text-input">
-                </div>
-                <div class="form-group">
-                    <label for="example-text-input" class="form-control-label">Longitude</label>
-                    <input class="form-control" type="text" value="John Snow" id="example-text-input">
-                </div>
-                <span></span>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+
                 <hr/>
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary">Save</button>
-                    <a href="{% url 'rumahsakit' %}" class="btn btn-primary">Cancel</a>
-                </div>
+                <button type="submit" class="btn btn-success">Create</button>
             </form>
         </div>  
       </div>

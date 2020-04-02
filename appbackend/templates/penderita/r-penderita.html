@@ -11,7 +11,7 @@
                   <h3 class="mb-0">Positif Covid 19</h3>
                 </div>
                 <div class="col text-right">
-                  <a href="{% url 'creatependerita' %}" class="btn btn-sm btn-primary" title="Create Item"><i class="fa fa-plus-circle"></i></a>
+                  <a href="{% url 'create-penderita' %}" class="btn btn-sm btn-primary" title="Create Item"><i class="fa fa-plus-circle"></i></a>
                 </div>
               </div>
             </div> 
@@ -34,7 +34,7 @@
                          <td class="text-uppercase" scope="row">{{ items.gender }}</td>
                          <td class="text-uppercase" scope="row">{{ items.status }}</td>
                          <td>
-                           <a class="btn btn-sm btn-warning" title="Edit Item" href="#"><i class="fa fa-edit"></i></a>
+                           <a class="btn btn-sm btn-warning" title="Edit Item" href="{% url 'update-penderita' items.id_penderita %}"><i class="fa fa-edit"></i></a>
                            <a class="btn btn-sm btn-danger" title="Delete Item" href="#"><i class="fa fa-trash"></i></a>
                          </td>
                        </tr>
