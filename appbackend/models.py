@@ -29,6 +29,7 @@ class Penderita(models.Model):
         ('Meninggal', 'MENINGGAL'),
         ('Positif', 'POSITIF'),
     )
+    umur = models.CharField(max_length=5, blank=True)
     status = models.CharField(max_length=15, choices=STATUS_CHOICES,default='sembuh')
 
     class Meta:
