@@ -179,6 +179,7 @@
   - Jika teman" ingin Berkontribusi terkait data dengan sangat senang hati saya akan menerima.
   - email saya terkait data **michaekarafir@gmail.com**
   - Atau bisa chat pada gitter klik pada badge gitter diatas, **chat on gitter**
+  - Project ini Open Source siapa saja boleh untuk Berkontribusi baik data atau repository.
 
 Salam Sehat
 Michael.
