@@ -1,16 +1,25 @@
 from django.contrib import admin
+from django.db.models import Count
 from .models import Kabupaten, Penderita, Rumah_sakit
 
 class PageKabupaten(admin.ModelAdmin):
-    list_display = ('id_kabupaten','nama')
+    list_display = ('id_kabupaten','nama','jumlah_positif')
     list_display_links = ('id_kabupaten','nama')
     search_fields = ('id_kabupaten','nama')
-    list_per_page = 5
+    list_per_page = 10
 
+    def get_queryset(self, request):
+        queryset = super().get_queryset(request)
+        queryset = queryset.annotate(items_count=Count('penderita'))
+        return queryset
+
+    def jumlah_positif(self, Kabupaten):
+        return Kabupaten.items_count
 
 class PagePenderita(admin.ModelAdmin):
     list_display = ('id_penderita','nama_lengkap','lokasi','status','gender','umur')
     list_display_links = ('id_penderita','nama_lengkap','lokasi','status','gender','umur')
+    list_filter = ('status', 'gender', )
     search_fields = ('id_penderita','nama_lengkap','lokasi','status','gender','umur')
     list_per_page = 10
 
