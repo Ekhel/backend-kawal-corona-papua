@@ -170,4 +170,16 @@
       ]
     }
     ```
+
+-------------------------------------------------------------------------------------------------------------
+
+## Kontribusi Data :
+  - Saya Belum Memiliki Sumber Data yang benar" valid.
+  - Sebagian Data Kasus di Provinsi Papua yang ada pada database backend diambil dari 60% Hasil Tracking Media.
+  - Jika teman" ingin Berkontribusi terkait data dengan sangat senang hati saya akan menerima.
+  - email saya terkait data **michaekarafir@gmail.com**
+  - Atau bisa chat pada gitter klik pada badge gitter diatas, **chat on gitter**
+
+Salam Sehat
+Michael.
     
