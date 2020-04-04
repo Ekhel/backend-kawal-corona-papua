@@ -4,7 +4,7 @@ from django.urls import reverse_lazy
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
-from .models import Kabupaten, Penderita, Rumah_sakit
+from .models import Kabupaten, Penderita, Rumah_sakit, Info
 
 def login(request):
     return render(request,'auth/login.html')
@@ -71,6 +71,25 @@ class RumahSakitUpdateView(UpdateView):
     fields = ('rumah_sakit','lokasi','lat','lon')
     context_object_name = 'Rumah Sakit'
     success_url = reverse_lazy('rumahsakit')
+
+
+class InfoView(ListView):
+    model = Info
+    template_name = 'page/r-info.html'
+
+
+class InfoCreateView(CreateView):
+    model = Info
+    template_name = 'page/c-info.html'
+    fields = ('tanggal','odp','pdp','positif','sembuh','meninggal','keteranga')
+    success_url = reverse_lazy('info')
+
+class InfoUpdateView(UpdateView):
+    model = Info
+    template_name = 'page/u-info.html'
+    fields = ('tanggal','odp','pdp','positif','sembuh','meninggal','keteranga')
+    context_object_name = 'Info'
+    success_url = reverse_lazy('info')
     
 
 

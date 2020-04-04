@@ -143,6 +143,6 @@ ADMIN_SITE_INDEX = "Backend Administrator"
 
 LOGIN_REDIRECT_URL = '/dashboard'
 LOGIN_URL = '/login'
-LOGOUT_REDIRECT_URL = '/login'
+LOGOUT_REDIRECT_URL = '/'
 
 django_heroku.settings(locals())

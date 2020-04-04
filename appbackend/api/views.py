@@ -1,6 +1,6 @@
-from ..models import Penderita, Kabupaten, Rumah_sakit
+from ..models import Penderita, Kabupaten, Rumah_sakit, Info
 from rest_framework import viewsets
-from .serializers import PenderitaSerializers, KabupatenSerializers, RsSerializers
+from .serializers import PenderitaSerializers, KabupatenSerializers, RsSerializers, InfoSerializers
 
 class PenderitaViewSet(viewsets.ModelViewSet):
     serializer_class = PenderitaSerializers
@@ -13,3 +13,7 @@ class KabupatenViewSet(viewsets.ModelViewSet):
 class RsViewSet(viewsets.ModelViewSet):
     serializer_class = RsSerializers
     queryset = Rumah_sakit.objects.all()
+
+class InfoViewSet(viewsets.ModelViewSet):
+    serializer_class = InfoSerializers
+    queryset = Info.objects.all()

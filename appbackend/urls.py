@@ -10,6 +10,9 @@ from . views import (
     RumahSakitView,
     RumahSakitCreateView,
     RumahSakitUpdateView,
+    InfoView,
+    InfoCreateView,
+    InfoUpdateView
 )
 
 from . import views
@@ -26,4 +29,7 @@ urlpatterns = [
     path('rumahsakit', login_required(RumahSakitView.as_view()), name='rumahsakit'),
     path('rumahsakit/create', login_required(RumahSakitCreateView.as_view()), name='create-rumahsakit'),
     path('rumahsakit/update/<int:pk>', login_required(RumahSakitUpdateView.as_view()), name='update-rumahsakit'),
+    path('info', login_required(InfoView.as_view()), name='info'),
+    path('info/create', login_required(InfoCreateView.as_view()), name='create-info'),
+    path('info/update/<int:pk>', login_required(InfoUpdateView.as_view()), name='update-info'),
 ]

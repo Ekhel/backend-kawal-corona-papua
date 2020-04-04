@@ -51,3 +51,21 @@ class Rumah_sakit(models.Model):
     
     def __str__(self):
         return self.rumah_sakit
+
+
+class Info(models.Model):
+    id_item = models.AutoField(primary_key=True)
+    tanggal = models.DateField()
+    odp = models.CharField(max_length=20)
+    pdp = models.CharField(max_length=20)
+    positif = models.CharField(max_length=20)
+    sembuh = models.CharField(max_length=20)
+    meninggal = models.CharField(max_length=20)
+    keteranga = models.TextField()
+
+    class Meta:
+        ordering = ('id_item',)
+    
+    def __str__(self):
+        return self.odp
+

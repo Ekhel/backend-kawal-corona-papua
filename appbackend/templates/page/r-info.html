@@ -1,0 +1,55 @@
+{% extends 'site_admin.html' %}
+
+{% block content %}
+
+<div class="row">
+      <div class="col">
+        <div class="card shadow">
+           <div class="card-header border-0">
+              <div class="row align-items-center">
+                <div class="col">
+                  <h3 class="mb-0">PAPAN INFORMASI KASUS COVID 19 PAPUA</h3>
+                </div>
+                <div class="col text-right">
+                  <a href="{% url 'create-info' %}" class="btn btn-sm btn-primary" title="Create Item"><i class="fa fa-plus-circle"></i></a>
+                </div>
+              </div>
+            </div> 
+            <div class="table-responsive">
+              <table class="table align-items-center table-flush">
+                 <thead class="thead-light">
+                    <tr>
+                       <th scope="col">NO</th>
+                       <th scope="col">Tanggal</th>
+                       <th scope="col">ODP</th>
+                       <th scope="col">PDP</th>
+                       <th scope="col">POSITIF</th>
+                       <th scope="col">SEMBUH</th>
+                       <th scope="col">MENINGGAL</th>
+                       <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for items in object_list %}
+                      <tr>
+                         <th scope="row">{{ forloop.counter }}</th>
+                         <td class="text-uppercase" scope="row">{{ items.tanggal }}</td>
+                         <td class="text-uppercase" scope="row">{{ items.odp }}</td>
+                         <td class="text-uppercase" scope="row">{{ items.pdp }}</td>
+                         <td class="text-uppercase" scope="row">{{ items.positif }}</td>
+                         <td class="text-uppercase" scope="row">{{ items.sembuh }}</td>
+                         <td class="text-uppercase" scope="row">{{ items.meninggal }}</td>
+                         <td>
+                           <a class="btn btn-sm btn-warning" title="Edit Item" href="{% url 'update-info' items.id_item %}"><i class="fa fa-edit"></i></a>
+                           <a class="btn btn-sm btn-danger" title="Delete Item" href="#"><i class="fa fa-trash"></i></a>
+                         </td>
+                       </tr>
+                        {% endfor %}
+                    </tbody>
+               </table>
+            </div>
+          </div>
+       </div>
+   </div>
+
+{% endblock content %}
