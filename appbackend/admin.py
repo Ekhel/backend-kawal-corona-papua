@@ -9,9 +9,9 @@ class PageKabupaten(admin.ModelAdmin):
 
 
 class PagePenderita(admin.ModelAdmin):
-    list_display = ('id_penderita','nama_lengkap','lokasi','status','gender')
-    list_display_links = ('id_penderita','nama_lengkap','lokasi','status','gender')
-    search_fields = ('id_penderita','nama_lengkap','lokasi','status','gender')
+    list_display = ('id_penderita','nama_lengkap','lokasi','status','gender','umur')
+    list_display_links = ('id_penderita','nama_lengkap','lokasi','status','gender','umur')
+    search_fields = ('id_penderita','nama_lengkap','lokasi','status','gender','umur')
     list_per_page = 10
 
 class PageRumahSakit(admin.ModelAdmin):

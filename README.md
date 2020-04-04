@@ -150,3 +150,23 @@
       ] 
     }
     ```
+
+  - [API Rumah Sakit Rujukan](https://kawal-corona.herokuapp.com/api/rumahsakit/)
+
+    ```javascripts
+    {
+      "count": 1,
+      "next": "null",
+      "previous": null,
+      "results": [
+        {
+            "id_rs": 1,
+            "rumah_sakit": "RSUD JAYAPURA",
+            "lokasi": "Jayapura Kota",
+            "lat": "-",
+            "lon": "-"
+        },
+      ]
+    }
+    ```
+    

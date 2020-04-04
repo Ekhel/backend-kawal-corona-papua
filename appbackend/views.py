@@ -34,13 +34,13 @@ class PenderitaView(ListView):
 class PenderitaCreateView(CreateView):
     model = Penderita
     template_name = 'penderita/c-penderita.html'
-    fields = ('nama_lengkap','lokasi','gender','status')
+    fields = ('nama_lengkap','lokasi','gender','status','umur')
     success_url = reverse_lazy('penderita')
 
 class PenderitaUpdateView(UpdateView):
     model = Penderita
     template_name = 'penderita/u-penderita.html'
-    fields = ('nama_lengkap','lokasi','gender','status')
+    fields = ('nama_lengkap','lokasi','gender','status','umur')
     success_url = reverse_lazy('penderita')
 
 

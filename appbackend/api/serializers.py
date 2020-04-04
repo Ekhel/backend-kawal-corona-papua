@@ -11,7 +11,8 @@ class PenderitaSerializers(serializers.ModelSerializer):
             'nama_lengkap',
             'lokasi',
             'gender',
-            'status'
+            'status',
+            'umur'
         )
 
 class KabupatenSerializers(serializers.ModelSerializer):
