@@ -170,6 +170,13 @@
       ]
     }
     ```
+-------------------------------------------------------------------------------------------------------------
+
+## Halaman Yang Tersedia :
+  - [x] CRUD Kabupaten
+  - [x] CRUD Pasien Positif
+  - [x] CRUD Rumah Sakit Rujukan
+  - [x] CRUD Informasi harian Kasus Covid 19 Prov Papua (Papan Informasi)
 
 -------------------------------------------------------------------------------------------------------------
 
@@ -180,6 +187,7 @@
   - email saya terkait data **michaekarafir@gmail.com**
   - Atau bisa chat pada gitter klik pada badge gitter diatas, **chat on gitter**
   - Project ini Open Source siapa saja boleh untuk Berkontribusi baik data atau repository.
+  - Saran dan Masukan Sangat Saya butuhkan.
 
 Salam Sehat
 Michael.
