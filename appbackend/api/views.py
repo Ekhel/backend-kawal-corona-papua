@@ -1,6 +1,6 @@
 from ..models import Penderita, Kabupaten, Rumah_sakit, Info
 from rest_framework import viewsets
-from .serializers import PenderitaSerializers, KabupatenSerializers, RsSerializers, InfoSerializers
+from .serializers import PenderitaSerializers, KabupatenSerializers, RsSerializers, InfoSerializers, PapanInfoSerializers
 
 class PenderitaViewSet(viewsets.ModelViewSet):
     serializer_class = PenderitaSerializers
@@ -17,3 +17,7 @@ class RsViewSet(viewsets.ModelViewSet):
 class InfoViewSet(viewsets.ModelViewSet):
     serializer_class = InfoSerializers
     queryset = Info.objects.all()
+
+class PapanInfoViewSet(viewsets.ReadOnlyModelViewSet):
+    serializer_class = PapanInfoSerializers
+    queryset = Info.objects.order_by('-tanggal')[:1]

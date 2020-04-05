@@ -50,3 +50,16 @@ class InfoSerializers(serializers.ModelSerializer):
             'sembuh',
             'meninggal',
         )
+
+class PapanInfoSerializers(serializers.ModelSerializer):
+    class Meta:
+        model = Info
+        fields = (
+            'id_item',
+            'tanggal',
+            'odp',
+            'pdp',
+            'positif',
+            'sembuh',
+            'meninggal',
+        )
