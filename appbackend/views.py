@@ -12,10 +12,12 @@ def login(request):
 @login_required
 def dashboard(request):
     contex = {
-        "page_title": "Dashboard | Backend"
+        'page_title': 'Dashboard',
+        'items': Info.objects.all(),
+        'info': Info.objects.order_by('-tanggal')[:1]
     }
-    
-    return render(request, 'page/dashboard.html', contex)
+
+    return render(request,'page/dashboard.html',contex)
 
 class KabupateView(ListView):
     template_name = 'kabupaten/r-kabupaten.html'
