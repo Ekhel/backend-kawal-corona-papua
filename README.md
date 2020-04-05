@@ -180,8 +180,8 @@
 
 
 ## Screen :
-  - ![positif](https://live.staticflickr.com/65535/49737626967_26cb3de065_c.jpg)
-  - ![dashboard](https://live.staticflickr.com/65535/49737294806_ab96efe58c_c.jpg)
+  - ![positif](https://live.staticflickr.com/65535/49737626967_26cb3de065_z.jpg)
+  - ![dashboard](https://live.staticflickr.com/65535/49737294806_ab96efe58c_z.jpg)
 
 -------------------------------------------------------------------------------------------------------------
 
