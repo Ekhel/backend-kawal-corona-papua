@@ -170,9 +170,32 @@
       ]
     }
     ```
+
+  - [API Informasi](https://kawal-corona.herokuapp.com/api/informasi/)
+  - [API Papan Informasi](https://kawal-corona.herokuapp.com/api/papaninfo/)
+
+    ```javascripts
+    {
+      "count": 1,
+      "next": "null",
+      "previous": null,
+      "results": [
+        {
+            "id_item": 1,
+            "tanggal": "2020-04-04",
+            "odp": "6723",
+            "pdp": "44",
+            "positif": "18",
+            "sembuh": "3",
+            "meninggal": "1"
+        }
+      ]
+    }
+    ```
 -------------------------------------------------------------------------------------------------------------
 
 ## Halaman Yang Tersedia :
+  - [x] Dashboard
   - [x] CRUD Kabupaten
   - [x] CRUD Pasien Positif
   - [x] CRUD Rumah Sakit Rujukan
