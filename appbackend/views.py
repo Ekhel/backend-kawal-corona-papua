@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.urls import reverse_lazy
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from django.db.models import Count
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from .models import Kabupaten, Penderita, Rumah_sakit, Info
 
@@ -23,11 +24,6 @@ class KabupateView(ListView):
     template_name = 'kabupaten/r-kabupaten.html'
     model = Kabupaten
 
-    def page_title(self):
-        contex = {
-            "page_title": "Kabupaten"
-        }
-        return render(contex)
 
 class PenderitaView(ListView):
     template_name = 'penderita/r-penderita.html'

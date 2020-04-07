@@ -1,8 +1,10 @@
 # BACKEND LIVE DATA KASUS COVID 19 (PAPUA)
 
-[![Build Status](https://travis-ci.com/Ekhel/backend-kawal-corona-papua.svg?branch=master)](https://travis-ci.com/Ekhel/backend-kawal-corona-papua)
-[![Gitter](https://badges.gitter.im/jayapura_django/community.svg)](https://gitter.im/jayapura_django/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+<p align="center">
+  [![Build Status](https://travis-ci.com/Ekhel/backend-kawal-corona-papua.svg?branch=master)](https://travis-ci.com/Ekhel/backend-kawal-corona-papua)
+  [![Gitter](https://badges.gitter.im/jayapura_django/community.svg)](https://gitter.im/jayapura_django/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+</p>
 
 ![Flickr](https://live.staticflickr.com/65535/49699875306_d9f82bedca_k.jpg)
 
@@ -20,97 +22,37 @@
 * Library :
   - Django REST Framework (API)
   - Gunicorn (Web Server)
+  - WhiteNoise (Static Files)
+  - Django CORS-Header (Middleware Cors Origin)
 
 * Frontend :
   - [Kawal-Corona](https://github.com/Ekhel/kawal-corona)
 
 * HOST
-  - [Heroku](https://kawal-corona.herokuapp.com)
+  - [Heroku Cloud](https://heroku.com)
 
 ------------------------------------------------------------------------------
 
 ## Sumber WEB dan API :
 
 * WEB :
-  - [Kawal Corona](https://kawalcorona.com)
+  - [Kawal Corona Indonesia](https://kawalcorona.com)
   - [Ethical Hacker Indonesia](https://hack.co.id)
+  - [Kawal Corona Papua](https://kawal-corona.herokuapp.com)
+
 
 * API Services :
   - [Data Indonesia : https://api.kawalcorona.com/indonesia](https://api.kawalcorona.com/indonesia)
 
-    ```javascripts
-    [
-        {
-          "name": "Indonesia",
-          "positif": "514",
-          "sembuh": "29",
-          "meninggal": "48"
-        }
-    ]
-    ```
-
   - [Data Provinsi : https://api.kawalcorona.com/indonesia/provinsi](https://api.kawalcorona.com/indonesia/provinsi)
 
-    ```javascripts
-    [
-        {
-            "attributes": {
-              "FID": 11,
-              "Kode_Provi": 31,
-              "Provinsi": "DKI Jakarta",
-              "Kasus_Posi": 307,
-              "Kasus_Semb": 22,
-              "Kasus_Meni": 29
-            }
-        }
-    ]	
-    ```
+  - [Data Global Per Negara : https://api.kawalcorona.com/](https://api.kawalcorona.com/) 
 
-  - [Data Global Per Negara : https://api.kawalcorona.com/](https://api.kawalcorona.com/)
-
-    ```javascripts
-    [
-        {
-            "attributes": {
-            "OBJECTID": 59,
-            "Country_Region": "China",
-            "Last_Update": 1584097775000,
-            "Lat": 30.5928,
-            "Long_": 114.3055,
-            "Confirmed": 81346,
-            "Deaths": 3265,
-            "Recovered": 72355,
-            "Active": 5726
-            }
-        }
-    ]			
-    ```
-    
   - [Data Global Positif : https://api.kawalcorona.com/positif/](https://api.kawalcorona.com/positif)
 
-    ```javascripts
-    {
-      "name": "Total Positif",
-      "value": "307,278"
-    }
-    ```
-
   - [Data Global Meninggal : https://api.kawalcorona.com/meningggal/](https://api.kawalcorona.com/meniggal)
-
-    ```javascripts
-    {
-      "name": "Total Meninggal",
-      "value": "13,049"
-    }
-    ```
+  
   - [Data Global Sembuh : https://api.kawalcorona.com/sembuh/](https://api.kawalcorona.com/sembuh)
-
-    ```javascripts
-    {
-      "name": "Total Sembuh",
-      "value": "92,373"
-    }
-    ```
 
 
 * Backend API (Data Khusus Provinsi Papua)
@@ -213,11 +155,11 @@
   - Saya Belum Memiliki Sumber Data yang benar" valid.
   - Sebagian Data Kasus di Provinsi Papua yang ada pada database backend diambil dari 60% Hasil Tracking Media.
   - Jika teman" ingin Berkontribusi terkait data dengan sangat senang hati saya akan menerima.
-  - email saya terkait data **michaekarafir@gmail.com**
+  - email saya terkait Data : **michaekarafir@gmail.com**
   - Atau bisa chat pada gitter klik pada badge gitter diatas, **chat on gitter**
-  - Project ini Open Source siapa saja boleh untuk Berkontribusi baik data atau repository.
+  - Project ini Open Source siapa saja boleh untuk Berkontribusi Termasuk Data dan Repository.
   - Saran dan Masukan Sangat Saya butuhkan.
 
-Salam Sehat
-Michael.
+  Salam Sehat
+  Michael.
     

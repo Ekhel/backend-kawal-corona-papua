@@ -16,6 +16,10 @@
                        <th scope="col">Kab/Kota</th>
                        <th scope="col">Latitude</th>
                        <th scope="col">Longitude</th>
+                       <th scope="col">Positif</th>
+                       <th scope="col">Sembuh</th>
+                       <th scope="col">Meninggal</th>
+                       <th scope="col">Action</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -25,6 +29,9 @@
                          <td scope="row">{{ items.nama }}</td>
                          <td scope="row">{{ items.lat }}</td>
                          <td scope="row">{{ items.lon }}</td>
+                         <td scope="row">{{ items.positif }}</td>
+                         <td scope="row">{{ items.jumlah_positif }}</td>
+                         <td scope="row">{{ items.jumlah_positif }}</td>
                          <td>
                            <a class="btn btn-sm btn-warning" title="Edit Item" href="#"><i class="fa fa-edit"></i></a>
                            <a class="btn btn-sm btn-danger" title="Delete Item" href="#"><i class="fa fa-trash"></i></a>
