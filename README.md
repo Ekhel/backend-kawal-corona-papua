@@ -1,11 +1,11 @@
+<p align="center">
 # BACKEND LIVE DATA KASUS COVID 19 (PAPUA)
+</p>
 
 <p align="center">
   <a href="https://travis-ci.com/Ekhel/backend-kawal-corona-papua"><img src="https://travis-ci.com/Ekhel/backend-kawal-corona-papua.svg?branch=master" alt="Build Status"></a>
-  
-  [![Build Status](https://travis-ci.com/Ekhel/backend-kawal-corona-papua.svg?branch=master)](https://travis-ci.com/Ekhel/backend-kawal-corona-papua)
-  [![Gitter](https://badges.gitter.im/jayapura_django/community.svg)](https://gitter.im/jayapura_django/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-  [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+  <a href="https://gitter.im/jayapura_django/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge"><img src="https://badges.gitter.im/jayapura_django/community.svg" alt="Gitter"></a>
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT"></a>
 
 </p>
 
