@@ -2,14 +2,13 @@
 <strong>BACKEND LIVE DATA KASUS COVID 19 (PAPUA)</strong>
 </h3>
 
+![Flickr](https://live.staticflickr.com/65535/49699875306_d9f82bedca_k.jpg)
 <p align="center">
   <a href="https://travis-ci.com/Ekhel/backend-kawal-corona-papua"><img src="https://travis-ci.com/Ekhel/backend-kawal-corona-papua.svg?branch=master" alt="Build Status"></a>
   <a href="https://gitter.im/jayapura_django/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge"><img src="https://badges.gitter.im/jayapura_django/community.svg" alt="Gitter"></a>
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT"></a>
 
 </p>
-
-![Flickr](https://live.staticflickr.com/65535/49699875306_d9f82bedca_k.jpg)
 
 ## System Requirements :
 * Language :
