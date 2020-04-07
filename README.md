@@ -1,6 +1,6 @@
-<p align="center">
-# BACKEND LIVE DATA KASUS COVID 19 (PAPUA)
-</p>
+<h3 align="center">
+<strong>BACKEND LIVE DATA KASUS COVID 19 (PAPUA)</strong>
+</h3>
 
 <p align="center">
   <a href="https://travis-ci.com/Ekhel/backend-kawal-corona-papua"><img src="https://travis-ci.com/Ekhel/backend-kawal-corona-papua.svg?branch=master" alt="Build Status"></a>
