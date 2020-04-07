@@ -1,6 +1,7 @@
 <h3 align="center">
 <strong>BACKEND LIVE DATA KASUS COVID 19 (PAPUA)</strong>
 </h3>
+<hr/>
 
 ![Flickr](https://live.staticflickr.com/65535/49699875306_d9f82bedca_k.jpg)
 <p align="center">
