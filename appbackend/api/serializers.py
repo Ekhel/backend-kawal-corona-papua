@@ -8,6 +8,7 @@ class PenderitaSerializers(serializers.ModelSerializer):
         model = Penderita
         fields = (
             'id_penderita',
+            'nomor',
             'nama_lengkap',
             'lokasi',
             'gender',

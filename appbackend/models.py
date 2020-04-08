@@ -25,6 +25,7 @@ class Kabupaten(models.Model):
 
 class Penderita(models.Model):
     id_penderita = models.AutoField(primary_key=True)
+    nomor = models.CharField(max_length=10, blank=True)
     nama_lengkap = models.CharField(max_length=250)
     lokasi = models.ForeignKey(Kabupaten, on_delete=models.CASCADE)
     GENDER_CHOICES = (
