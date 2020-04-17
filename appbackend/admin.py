@@ -19,7 +19,7 @@ class PageKabupaten(admin.ModelAdmin):
 class PagePenderita(admin.ModelAdmin):
     list_display = ('nomor','nama_lengkap','lokasi','status','gender','umur')
     list_display_links = ('nomor','nama_lengkap','lokasi','status','gender','umur')
-    list_filter = ('status', 'gender', )
+    list_filter = ('status', 'lokasi')
     search_fields = ('no','nama_lengkap','lokasi','status','gender','umur')
     list_per_page = 10
 
