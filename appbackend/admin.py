@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.db.models import Count
-from .models import Kabupaten, Penderita, Rumah_sakit, Info
+from .models import Kabupaten, Penderita, Rumah_sakit, Info, Odp
 
 class PageKabupaten(admin.ModelAdmin):
     list_display = ('id_kabupaten','nama','jumlah_positif')
@@ -35,9 +35,17 @@ class PageInfo(admin.ModelAdmin):
     search_fields = ('tanggal',)
     list_per_page = 10
 
+class PageOdp(admin.ModelAdmin):
+    list_display = ('id_odp','nama_orang','gender','alamat','no_kontak','mulai_dp','berakhir_dp','lokasi')
+    list_display_links = ('id_odp', 'nama_orang', 'alamat','no_kontak')
+    list_filter = ('gender', 'lokasi')
+    search_fields = ('nama_orang', 'alamat', 'no_kontak')
+    list_per_page = 10
+
 
 admin.site.register(Kabupaten, PageKabupaten)
 admin.site.register(Penderita, PagePenderita)
 admin.site.register(Rumah_sakit, PageRumahSakit)
 admin.site.register(Info, PageInfo)
+admin.site.register(Odp, PageOdp)
 

@@ -78,3 +78,25 @@ class Info(models.Model):
     def __str__(self):
         return self.odp
 
+class Odp(models.Model):
+    id_odp = models.AutoField(primary_key=True)
+    no = models.CharField(max_length=10)
+    nama_orang = models.CharField(max_length=50)
+    GENDER_CHOICES = (
+        ('Laki-Laki','LAKI-LAKI'),
+        ('Perempuan', 'PEREMPUAN'),
+    )
+    gender = models.CharField(max_length=15, choices=GENDER_CHOICES,default='laki-laki')
+    alamat = models.CharField(max_length=250)
+    no_kontak = models.CharField(max_length=20)
+    mulai_dp = models.DateField(auto_now=False)
+    berakhir_dp = models.DateField(auto_now=False)
+    lokasi = models.ForeignKey(Kabupaten, on_delete=models.CASCADE)
+
+    class Meta:
+        ordering = ('id_odp',)
+
+    def __str__(self):
+        return self.nama_orang
+
+
