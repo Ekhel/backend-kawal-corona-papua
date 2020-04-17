@@ -1,8 +1,10 @@
 from ..models import Penderita, Kabupaten, Rumah_sakit, Info
-from rest_framework import viewsets
+from rest_framework import viewsets, filters
 from .serializers import PenderitaSerializers, KabupatenSerializers, RsSerializers, InfoSerializers, PapanInfoSerializers
 
 class PenderitaViewSet(viewsets.ReadOnlyModelViewSet):
+    search_fields = ['status']
+    filter_backends = (filters.SearchFilter,)
     serializer_class = PenderitaSerializers
     queryset = Penderita.objects.all()
 
