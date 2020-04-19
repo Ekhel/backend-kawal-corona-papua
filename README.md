@@ -25,10 +25,11 @@
   - Django REST Framework (API)
   - Gunicorn (Web Server)
   - WhiteNoise (Static Files)
-  - Django CORS-Header (Middleware Cors Origin)
+  - Django CORS-Header (Middleware Cors Origin for API)
+  - ![requirements](https://github.com/Ekhel/backend-kawal-corona-papua/blob/master/requirements.txt)
 
 * Frontend :
-  - [Kawal-Corona](https://github.com/Ekhel/kawal-corona)
+  - [Kawal Corona Papua](https://github.com/Ekhel/frontend-kawal-corona-papua)
 
 * HOST
   - [Heroku Cloud](https://heroku.com)
@@ -144,7 +145,19 @@
   - [x] CRUD Pasien Positif
   - [x] CRUD Rumah Sakit Rujukan
   - [x] CRUD Informasi harian Kasus Covid 19 Prov Papua (Papan Informasi)
+  - [x] ODP (Orang Dalam Pantauan)
+  - [x] Grafik Statistik Data Per Hari
 
+--------------------------------------------------------------------------------------------------------------
+
+## Yang Akan dikerjakan : 
+  - [ ] Registrasi Auth API User
+  - [ ] Auth API Via DFR ke Frontend
+  - [ ] GraphQL untuk Query API (Sudah ada pada Backend tapi masih pke DRF Menggunakan Filter)
+  - [ ] OPD, PDP dan Positif Data Analystic
+  - [ ] Peta (Maps) Sebaran Covid 19 Kusus Papua.
+
+---------------------------------------------------------------------------------------------------------------
 
 ## Screen :
   - ![positif](https://live.staticflickr.com/65535/49737626967_26cb3de065_z.jpg)
@@ -153,7 +166,7 @@
 
 -------------------------------------------------------------------------------------------------------------
 
-## Kontribusi Data :
+## Kontribusi Data & Project :
   - Saya Belum Memiliki Sumber Data yang benar" valid.
   - Sebagian Data Kasus di Provinsi Papua yang ada pada database backend diambil dari 60% Hasil Tracking Media.
   - Jika teman" ingin Berkontribusi terkait data dengan sangat senang hati saya akan menerima.
