@@ -148,7 +148,7 @@
      // Install Package axios : npm install --save axios
      import axios from 'axios';
 
-     const Key = 'Token 40d1753839ce8f597e14822ebaf918edb939de37';
+     const Key = 'Token TOKEN_ANDA_DARI_LOGIN';
 
      export default axios.create({
        baseURL: 'https://kawal-corona.herokuapp.com/api/penderita',
