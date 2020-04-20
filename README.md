@@ -166,13 +166,14 @@
   - [x] ODP (Orang Dalam Pantauan)
   - [x] Grafik Statistik Data Per Hari
   - [x] Registrasi rest-auth API User Untuk Token Authorization
+  - [x] Login rest-auth untuk Token Authorization
 
 --------------------------------------------------------------------------------------------------------------
 
 ## Yang Akan dikerjakan : 
   - [ ] Auth API Via DFR ke Frontend
   - [ ] GraphQL untuk Query API (Sudah ada pada Backend tapi masih pke DRF Menggunakan Filter)
-  - [ ] OPD, PDP dan Positif Data Analystic
+  - [ ] ODP, PDP dan Positif Data Analystic
   - [ ] Peta (Maps) Sebaran Covid 19 Kusus Papua.
 
 ---------------------------------------------------------------------------------------------------------------
