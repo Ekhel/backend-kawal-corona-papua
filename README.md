@@ -140,7 +140,8 @@
 ----------------------------------------------------------------------------------------------------------
 
 * **Untuk Data Penderita Sudah Menggunakan rest-auth Token :**
-  - Register Untuk Dapatkan Token [Disini](https://kawal-corona.herokuapp.com/rest-auth/registration)
+  - Register Untuk Dapatkan Token [Disini](https://kawal-corona.herokuapp.com/rest-auth/registration/)
+  - Setelah Register, Login untuk Dapatkan Token [Disini](https://kawal-corona.herokuapp.com/rest-auth/login/)
 
   - Contoh dengan **React** Untuk FETCH Data Penderita :
   ```JSX
