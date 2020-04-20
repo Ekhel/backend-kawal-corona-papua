@@ -1,12 +1,16 @@
 from ..models import Penderita, Kabupaten, Rumah_sakit, Info
 from rest_framework import viewsets, filters
 from .serializers import PenderitaSerializers, KabupatenSerializers, RsSerializers, InfoSerializers, PapanInfoSerializers
+from rest_framework.authentication import TokenAuthentication
+from rest_framework.permissions import IsAuthenticated
 
 class PenderitaViewSet(viewsets.ReadOnlyModelViewSet):
     search_fields = ['status']
     filter_backends = (filters.SearchFilter,)
     serializer_class = PenderitaSerializers
     queryset = Penderita.objects.all()
+    authentication_classes = (TokenAuthentication,)
+    permission_classes = (IsAuthenticated,)
 
 class KabupatenViewSet(viewsets.ReadOnlyModelViewSet):
     serializer_class = KabupatenSerializers

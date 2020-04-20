@@ -137,6 +137,23 @@
       ]
     }
     ```
+----------------------------------------------------------------------------------------------------------
+
+* **Untuk Data Penderita Sudah Menggunakan rest-auth Token :**
+  - Register Untuk Dapatkan Token [Disini](https://kawal-corona.herokuapp.com/rest-auth/registration)
+
+  - Contoh dengan **React** Untuk FETCH Data Penderita :
+  ```JSX
+     // Install Package axios : npm install --save axios
+     import axios from 'axios';
+
+     const Key = 'Token 40d1753839ce8f597e14822ebaf918edb939de37';
+
+     export default axios.create({
+       baseURL: 'https://kawal-corona.herokuapp.com/api/penderita',
+       headers: {'Authorization': Key}
+     });
+  ```
 -------------------------------------------------------------------------------------------------------------
 
 ## Halaman Yang Tersedia :
@@ -147,11 +164,11 @@
   - [x] CRUD Informasi harian Kasus Covid 19 Prov Papua (Papan Informasi)
   - [x] ODP (Orang Dalam Pantauan)
   - [x] Grafik Statistik Data Per Hari
+  - [x] Registrasi rest-auth API User Untuk Token Authorization
 
 --------------------------------------------------------------------------------------------------------------
 
 ## Yang Akan dikerjakan : 
-  - [ ] Registrasi Auth API User
   - [ ] Auth API Via DFR ke Frontend
   - [ ] GraphQL untuk Query API (Sudah ada pada Backend tapi masih pke DRF Menggunakan Filter)
   - [ ] OPD, PDP dan Positif Data Analystic
