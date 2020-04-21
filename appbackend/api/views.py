@@ -3,6 +3,8 @@ from rest_framework import viewsets, filters
 from .serializers import PenderitaSerializers, KabupatenSerializers, RsSerializers, InfoSerializers, PapanInfoSerializers
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
+from django.db.models import Q, Count
+from django.db import models
 
 class PenderitaViewSet(viewsets.ReadOnlyModelViewSet):
     search_fields = ['status']
@@ -15,7 +17,7 @@ class PenderitaViewSet(viewsets.ReadOnlyModelViewSet):
 class KabupatenViewSet(viewsets.ReadOnlyModelViewSet):
     serializer_class = KabupatenSerializers
     queryset = Kabupaten.objects.all()
-
+        
 class RsViewSet(viewsets.ReadOnlyModelViewSet):
     serializer_class = RsSerializers
     queryset = Rumah_sakit.objects.all()

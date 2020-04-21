@@ -1,20 +1,36 @@
 from django.contrib import admin
-from django.db.models import Count
+from django.db.models import Q, Count
+from django.db import models
 from .models import Kabupaten, Penderita, Rumah_sakit, Info, Odp
 
 class PageKabupaten(admin.ModelAdmin):
-    list_display = ('id_kabupaten','nama','jumlah_positif')
+    list_display = ('id_kabupaten','nama','odp','positif','sembuh','meninggal')
     list_display_links = ('id_kabupaten','nama')
     search_fields = ('id_kabupaten','nama')
     list_per_page = 10
 
     def get_queryset(self, request):
         queryset = super().get_queryset(request)
-        queryset = queryset.annotate(items_count=Count('penderita'))
+        queryset = queryset.annotate(
+            positif_count=Count('penderita'),
+            sembuh_count=Count('penderita',filter=models.Q(penderita__status="Sembuh")),
+            meninggal_count=Count('penderita',filter=models.Q(penderita__status="Meninggal")),
+            odp_count=Count('odp')
+        )
         return queryset
 
-    def jumlah_positif(self, Kabupaten):
-        return Kabupaten.items_count
+    def positif(self, obj):
+        return obj.positif_count                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+
+    def sembuh(self, obj):
+        return obj.sembuh_count
+
+    def meninggal(self, obj):
+        return obj.meninggal_count
+
+    def odp(self, obj):
+        return obj.odp_count
+
 
 class PagePenderita(admin.ModelAdmin):
     list_display = ('nomor','nama_lengkap','lokasi','status','gender','umur')

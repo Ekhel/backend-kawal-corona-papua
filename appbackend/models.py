@@ -1,7 +1,7 @@
 from django.db import models
 from django.shortcuts import reverse
 from django.conf import settings
-from django.db.models import Count
+from django.db.models import Q, Count
 
 class Kabupaten(models.Model):
     id_kabupaten = models.AutoField(primary_key=True)
@@ -15,13 +15,6 @@ class Kabupaten(models.Model):
     class Meta:
         ordering = ('id_kabupaten',)
 
-    def get_queryset(self, request):
-        queryset = super().get_queryset(request)
-        queryset = queryset.annotate(items_count=Count('penderita'))
-        return queryset
-
-    def jumlah_positif(self, Kabupaten):
-        return Kabupaten.items_count
 
 class Penderita(models.Model):
     id_penderita = models.AutoField(primary_key=True)

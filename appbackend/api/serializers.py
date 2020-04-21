@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from ..models import Penderita, Kabupaten, Rumah_sakit, Info
+from ..admin import PageKabupaten
 
 class PenderitaSerializers(serializers.ModelSerializer):
     lokasi = serializers.StringRelatedField(read_only=True)
