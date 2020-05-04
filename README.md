@@ -9,7 +9,7 @@
 ## Tentang Kawal-Corona Papua :
   - Kawal Corona Papua adalah Web Applikasi sekaligus dapat Menjadi Portal Informasi Live Data Kasus Covid 19 di Papua, Sedikit Sumbangsih dari Kami untuk Papua, Project ini Open Source, Siapa Saja Boleh untuk Berkontribusi.
 
-<p align="center"><img src="https://live.staticflickr.com/65535/49784089877_0d7c611050_c.jpg" width="500px"></p>
+<p align="center"><img src="https://github.com/Ekhel/backend-kawal-corona-papua/blob/master/appbackend/static/img/brand/mockup-dashboard.jpg" width="800px"></p>
 ------------------------------------------------------------------------------------------------------------------------
 
 ## System Requirements :
