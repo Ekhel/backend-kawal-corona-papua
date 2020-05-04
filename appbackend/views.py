@@ -1,11 +1,12 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect 
 from django.http import HttpResponse
 from django.urls import reverse_lazy
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.db.models import Count
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
-from .models import Kabupaten, Penderita, Rumah_sakit, Info
+from .models import Kabupaten, Penderita, Rumah_sakit, Info, Odp, Pdp
+from .forms import odpCreate
 
 def login(request):
     return render(request,'auth/login.html')
@@ -88,6 +89,29 @@ class InfoUpdateView(UpdateView):
     fields = ('tanggal','odp','pdp','positif','sembuh','meninggal','keteranga')
     context_object_name = 'Info'
     success_url = reverse_lazy('info')
-    
 
 
+class odpView(ListView):
+    model = Pdp
+    template_name = 'odp/r-odp.html'
+
+
+@login_required
+def create_odp(request):
+    contex = {
+        'page_title': 'Tambah ODP',
+        'Kabupaten': Kabupaten.objects.all()
+    }
+    return render(request, 'odp/c-odp.html', contex)
+
+
+def save_odp(request):
+    if request.method == 'POST':
+       odp = odpCreate(request.POST)
+       if odp.is_valid():
+           odp.save()
+           return redirect('odpView')
+       else:
+            return HttpResponse("""your form is wrong, reload on <a href = "{{ url : 'odp'}}">reload</a>""")
+    else:
+        return render(request, 'odp/c-odp.html', {'form': odp})

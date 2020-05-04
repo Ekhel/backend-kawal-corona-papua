@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.db.models import Q, Count
 from django.db import models
-from .models import Kabupaten, Penderita, Rumah_sakit, Info, Odp
+from .models import Kabupaten, Penderita, Rumah_sakit, Info, Odp, Pdp
 
 class PageKabupaten(admin.ModelAdmin):
     list_display = ('id_kabupaten','nama','odp','positif','sembuh','meninggal')
@@ -15,7 +15,7 @@ class PageKabupaten(admin.ModelAdmin):
             positif_count=Count('penderita'),
             sembuh_count=Count('penderita',filter=models.Q(penderita__status="Sembuh")),
             meninggal_count=Count('penderita',filter=models.Q(penderita__status="Meninggal")),
-            odp_count=Count('odp')
+            odp_count=Count('odp'),
         )
         return queryset
 
@@ -52,8 +52,15 @@ class PageInfo(admin.ModelAdmin):
     list_per_page = 10
 
 class PageOdp(admin.ModelAdmin):
-    list_display = ('id_odp','nama_orang','gender','alamat','no_kontak','mulai_dp','berakhir_dp','lokasi')
+    list_display = ('id_odp','nama_orang','gender','alamat','no_kontak','mulai_dp','berakhir_dp','lokasi','status_opd')
     list_display_links = ('id_odp', 'nama_orang', 'alamat','no_kontak')
+    list_filter = ('gender', 'lokasi')
+    search_fields = ('nama_orang', 'alamat', 'no_kontak')
+    list_per_page = 10
+
+class PagePdp(admin.ModelAdmin):
+    list_display = ('id_pdp','nama','gender','umur','no_kontak','lokasi','alamat','rs','status_pdp')
+    list_display_links = ('id_pdp','nama','gender','umur','no_kontak','lokasi','alamat','rs','status_pdp')
     list_filter = ('gender', 'lokasi')
     search_fields = ('nama_orang', 'alamat', 'no_kontak')
     list_per_page = 10
@@ -64,4 +71,5 @@ admin.site.register(Penderita, PagePenderita)
 admin.site.register(Rumah_sakit, PageRumahSakit)
 admin.site.register(Info, PageInfo)
 admin.site.register(Odp, PageOdp)
+admin.site.register(Pdp, PagePdp)
 

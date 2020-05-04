@@ -1,0 +1,105 @@
+{% extends 'site_admin.html' %}
+{% block title %} {{ page_title }} {% endblock title %}
+
+{% block content %}
+   <div class="row">
+     <div class="col">
+       <div class="card bg-secondary shadow">
+         <div class="card-header bg-white border-0">
+            <div class="col-8">
+              <h3 class="mb-0">Input ODP</h3>
+            </div>
+         </div>
+         <div class="card-body">
+           <form method="post" action="{% url 'saveodp' %}">
+            {% csrf_token %}
+            <div class="pl-lg-10">
+              <div class="row">
+                <div class="col-md-10">
+                  <div class="form-group">
+                    <label class="form-control-label">No</label>
+                    <input type="text" name="no" class="form-control" id="exampleFormControlInput1" placeholder="nama">
+                    </div>
+                </div>
+                <div class="col-md-10">
+                  <div class="form-group">
+                    <label class="form-control-label">Nama</label>
+                    <input type="text" name="nama_orang" class="form-control" id="exampleFormControlInput1" placeholder="nama">
+                    </div>
+                </div>
+                <div class="col-md-10">
+                <div class="form-group">
+                  <label class="form-control-label">Gender</label>
+                  <select type="text" class="form-control" name="gender">
+                    <option value="---- Pilih ---"></option>
+                    <option value="Laki-Laki">Laki - Laki</option>
+                    <option value="Perempuan">Perempuan</option>
+                  </select>
+                </div>
+                </div>
+                <div class="col-md-10">
+                <div class="form-group">
+                    <label class="form-control-label">Umur</label>
+                    <input type="text" name="umur" class="form-control" id="exampleFormControlInput1" placeholder="Umur">
+                </div>
+                </div>
+                <div class="col-md-10">
+                <div class="form-group">
+                    <label class="form-control-label">Alamat</label>
+                    <textarea class="form-control" name="alamat" id="exampleFormControlTextarea1" rows="3" placeholder="Alamat ..."></textarea>
+                </div>
+                </div>
+                <div class="col-md-10">
+                <div class="form-group">
+                    <label class="form-control-label">Kontak</label>
+                    <input type="text" name="no_kontak" class="form-control" id="exampleFormControlInput1" placeholder="No Kontak">
+                </div>
+                </div>
+                <div class="col-md-10">
+                <div class="form-group">
+                    <label class="form-control-label">Mulai DP</label>
+                    <input type="date" name="mulai_dp" class="form-control" id="exampleFormControlInput1">
+                </div>
+                </div>
+                <div class="col-md-10">
+                <div class="form-group">
+                    <label class="form-control-label">Berahir DP</label>
+                    <input type="date" name="berakhir_dp" class="form-control" id="exampleFormControlInput1">
+                </div>
+                </div>
+                <div class="col-md-10">
+                <div class="form-group">
+                  <label class="form-control-label">Kabupaten</label>
+                  <select type="text" class="form-control" name="lokasi">
+                     <option value="">--- Pilih ---</option>
+                     {% for k in Kabupaten %}
+                     <option value="{{ k.id_kabupaten }}">{{ k.nama }}</option>
+                     {% endfor %}
+                  </select>
+                </div>
+                </div>
+                <div class="col-md-10">
+                <div class="form-group">
+                  <label class="form-control-label">Status</label>
+                  <select type="text" class="form-control" name="status_opd">
+                     <option value="---- Pilih ---"></option>
+                     <option value="Selesai">SELESAI</option>
+                     <option value="Belum">BELUM</option>
+                  </select>
+                </div>
+                </div>
+                <div class="col-md-10">
+                  <div class="form-group">
+                     <button type="submit" class="btn btn-success">Simpan</button>
+                  </div>
+                </div>
+            </div>
+           </div>
+          </form> 
+         </div>
+       </div>
+     </div>
+   </div>
+
+   
+{% endblock content %}

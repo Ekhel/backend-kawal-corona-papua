@@ -12,7 +12,8 @@ from . views import (
     RumahSakitUpdateView,
     InfoView,
     InfoCreateView,
-    InfoUpdateView
+    InfoUpdateView,
+    odpView
 )
 
 from . import views
@@ -32,4 +33,7 @@ urlpatterns = [
     path('info', login_required(InfoView.as_view()), name='info'),
     path('info/create', login_required(InfoCreateView.as_view()), name='create-info'),
     path('info/update/<int:pk>', login_required(InfoUpdateView.as_view()), name='update-info'),
+    path('odp', login_required(odpView.as_view()), name='odp'),
+    path('odp/create-odp', views.create_odp, name='create-odp'),
+    path('saveodp', views.save_odp, name='saveodp'),
 ]
